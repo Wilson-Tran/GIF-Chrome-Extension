@@ -7,9 +7,42 @@
       <script src="manifest.json"></script>
     </head>
   <body>
-    <div id="gif-wrap">
+    <form id="myForm">
+      <div class="list-choice">
+        <div id="daily-dose"
+        <span>Your daily dose of </span>
+        </div>
         
-    </div>
+        <div class="list-choice-objects">
+          <label>
+            <input type="radio" name="category" checked="checked" value="positivity"/>       <span>good vibes.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="meme"/>                         <span>memes.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="chill"/>                         <span>calm.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="sports"/>                         <span>sports.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="kpop"/>                         <span>kpop.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="cute-animals"/>                         <span>cuteness.</span>
+          </label>
+          <label>
+            <input type="radio" name="category" value="random"/>                         <span>random.</span>
+          </label>
+          
+        </div>
+        
+      </div><div id="submit_container"><input id="submit_button" type="submit" value=">"></div>
+      
+    </form>
+    <div id="gif-wrap"></div>
+    
     <script src='tab.js'></script>
   </body>
 </html>
