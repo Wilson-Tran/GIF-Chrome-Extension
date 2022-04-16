@@ -6,55 +6,48 @@ document.addEventListener('DOMContentLoaded', function() {
   tag: "positivity",
   type: "random",
   rating: "pg-13"
-}; 
+  }; 
 
-let giphyURL = encodeURI(
-  giphy.baseURL +
-    giphy.type +
-    "?api_key=" +
-    giphy.apiKey +
-    "&tag=" +
-    giphy.tag +
-    "&rating=" +
-    giphy.rating
-);
+  let giphyURL = encodeURI(
+    giphy.baseURL +
+      giphy.type +
+      "?api_key=" +
+      giphy.apiKey +
+      "&tag=" +
+      giphy.tag +
+      "&rating=" +
+      giphy.rating
+  );
 
-function createURL(tag) {
-  giphyURL = encodeURI(
-  giphy.baseURL +
-    giphy.type +
-    "?api_key=" +
-    giphy.apiKey +
-    "&tag=" +
-    tag +
-    "&rating=" +
-    giphy.rating
-);
-}
+  function createURL(tag) {
+    giphyURL = encodeURI(
+    giphy.baseURL +
+      giphy.type +
+      "?api_key=" +
+      giphy.apiKey +
+      "&tag=" +
+      tag +
+      "&rating=" +
+      giphy.rating
+  );
+  }
 
-function renderGif(giphyData) {
-  console.log(giphyData);
-  const gifWrap = document.getElementById("gif-wrap");
+  function renderGif(giphyData) {
+    console.log(giphyData);
+    const gifWrap = document.getElementById("gif-wrap");
 
-  gifWrap.style.backgroundImage = "url('" + giphyData.data.images.original.url + "')";
+    gifWrap.style.backgroundImage = "url('" + giphyData.data.images.original.url + "')";
 
-}
+  }
 
-fetch(giphyURL)
-  .then(response => response.json())
-  .then(data => {renderGif(data);
-    console.log(data);});
+  fetch(giphyURL)
+    .then(response => response.json())
+    .then(data => {renderGif(data);
+      console.log(data);});
 
-  const form = document.querySelector("form");
-  const submission = document.querySelector("#submit_button")
-  // submission.addEventListener('click', e => {
-  // e.preventDefault();
-  // const formData = new FormData(form);
-  // const value = formData.get()
-  // // console.log(formData);
-  // //giphy.tag = values[1];
-  // console.log(giphy.tag);
-  // }, false)
+    const form = document.querySelector("form");
+    const submission = document.querySelector("#submit_button")
+  
   form.onsubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(form);
@@ -73,14 +66,14 @@ fetch(giphyURL)
 
 
 
-function selectChoice() {
-  var data = new FormData(form);
-  const formChoice = document.querySelector('category');
-  var output = "";
-  // for (const entry of data) {
-  //   output = output + entry[0] + "=" + entry[1] + "\r";
-  // };
-  // log.innerText = output;
-  event.preventDefault();
-  console.log(formChoice);
-}
+// function selectChoice() {
+//   var data = new FormData(form);
+//   const formChoice = document.querySelector('category');
+//   var output = "";
+//   // for (const entry of data) {
+//   //   output = output + entry[0] + "=" + entry[1] + "\r";
+//   // };
+//   // log.innerText = output;
+//   event.preventDefault();
+//   console.log(formChoice);
+// }

@@ -7,7 +7,7 @@ body {
 
 #gif-wrap {
   position: absolute;
-	top: 20%;
+	top: 25%;
 	bottom: 25%;
 	left: 0;
 	right: 0;
@@ -30,8 +30,21 @@ body {
 #submit_container {
   position: absolute;
   right: 40%;
-  
- 
+}
+
+#submit_button {
+  background-color: #3aacc3;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+#submit_button:hover {
+  background-color: #308c9f;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway);
@@ -40,8 +53,8 @@ body{
   background: #000;
 }
 .list-choice{
-  width:300px;
-  margin:1em auto;
+  width:600px;
+  margin: 1em auto;
   position: relative;
   cursor: pointer;
   color: aliceblue;  
